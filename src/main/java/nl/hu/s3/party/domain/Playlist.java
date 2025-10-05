@@ -3,9 +3,10 @@ package nl.hu.s3.party.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Submission {
+public class Playlist {
 
     List<Song> songList = new ArrayList<>();
+    Integer maxSongs = 10;
 
     public void addSong(Song song) {
 

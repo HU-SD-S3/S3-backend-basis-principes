@@ -11,7 +11,7 @@ public class Song {
 
     List<String> ALLOWED_GENRES = Arrays.asList(
             "Pop", "Rock", "HipHop", "Jazz", "Classical",
-            "EDM", "Metal", "RnB", "Country", "Reggae"
+            "EDM", "Metal", "RnB", "Country", "Reggae", "Nederlandstalig"
     );
 
     public Song(String title, String artist, String genre) {
