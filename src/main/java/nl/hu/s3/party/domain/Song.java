@@ -14,6 +14,11 @@ public class Song {
             "EDM", "Metal", "RnB", "Country", "Reggae", "Nederlandstalig"
     );
 
+    public Song(String title, String artist) {
+        this.title = title;
+        this.artist = artist;
+    }
+
     public Song(String title, String artist, String genre) {
 
         if (!isValidGenre(genre)) {

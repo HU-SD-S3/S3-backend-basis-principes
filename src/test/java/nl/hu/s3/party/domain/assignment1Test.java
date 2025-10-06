@@ -16,7 +16,7 @@ class assignment1Test {
         Field[] fields = Song.class.getDeclaredFields();
 
         assertTrue(Stream.of(fields).allMatch(field ->
-            Modifier.isPrivate(field.getModifiers())
+                Modifier.isPrivate(field.getModifiers())
         ));
     }
 

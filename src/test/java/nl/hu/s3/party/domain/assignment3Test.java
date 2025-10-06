@@ -14,9 +14,9 @@ class assignment3Test {
         Method[] methods = Song.class.getMethods();
 
         assertTrue(Stream.of(methods).anyMatch(method ->
-                 method.getName().startsWith("getTitle") &&
-                 Modifier.isPublic(method.getModifiers()
-                ))
+                method.getName().startsWith("getTitle") &&
+                        Modifier.isPublic(method.getModifiers()
+                        ))
         );
 
         assertTrue(Stream.of(methods).anyMatch(method ->

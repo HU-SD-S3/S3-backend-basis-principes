@@ -11,9 +11,9 @@ public class assignment4Test {
         // arrange
         Playlist playlist = new Playlist();
 
-        Song s1 = new Song("Blinding Lights", "The Weeknd", "Pop");
-        Song s2 = new Song("Smells Like Teen Spirit", "Nirvana", "Rock");
-        Song s3 = new Song("Blinding Lights", "The Weeknd", "Pop");
+        Song s1 = new Song("Blinding Lights", "The Weeknd");
+        Song s2 = new Song("Smells Like Teen Spirit", "Nirvana");
+        Song s3 = new Song("Blinding Lights", "The Weeknd");
 
         playlist.addSong(s1);
         playlist.addSong(s2);
