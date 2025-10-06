@@ -5,8 +5,16 @@ import java.util.List;
 
 public class Playlist {
 
-    List<Song> songList = new ArrayList<>();
-    Integer maxSongs = 10;
+    private List<Song> songList = new ArrayList<>();
+    private Integer maxSongs = 10;
+
+    public List<Song> getSongList() {
+        return songList;
+    }
+
+    public Integer getMaxSongs() {
+        return maxSongs;
+    }
 
     public void addSong(Song song) {
 

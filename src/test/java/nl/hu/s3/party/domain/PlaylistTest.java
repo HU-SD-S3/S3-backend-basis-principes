@@ -12,7 +12,7 @@ class PlaylistTest {
     void can_add_song() {
         // arrange
         var playlist = new Playlist();
-        var newSong = new Song("Had ik maar minder gemasturbeerd", "Sander de Kroon", "Country");
+        var newSong = new Song("Had ik maar minder gemasturbeerd", "Sander de Kroon");
         // act
         playlist.addSong(newSong);
 
@@ -25,23 +25,23 @@ class PlaylistTest {
         // arrange
         Playlist playlist = new Playlist();
         Song[] songs = {
-                new Song("Links Rechts", "Snollebollekes", "Nederlandstalig"),
-                new Song("Vlieg Met Me Mee", "Paul de Leeuw", "Nederlandstalig"),
-                new Song("Een Beetje Verliefd", "André Hazes", "Nederlandstalig"),
-                new Song("Kleine Café Aan De Haven", "Vader Abraham", "Nederlandstalig"),
-                new Song("Ik Neem Je Mee", "Gers Pardoel", "Nederlandstalig"),
-                new Song("Lekker Likkie", "Gebroeders Ko", "Nederlandstalig"),
-                new Song("Dansen Met Janssen", "Kris Kross Amsterdam & Donnie", "Nederlandstalig"),
-                new Song("Heb Je Even Voor Mij", "Frans Bauer", "Nederlandstalig"),
-                new Song("Per Spoor (Kedeng Kedeng)", "Guus Meeuwis & Vagant", "Nederlandstalig"),
-                new Song("Schudden", "Def Rhymz", "Nederlandstalig"),
-                new Song("Zij Gelooft In Mij", "André Hazes", "Nederlandstalig")
+                new Song("Links Rechts", "Snollebollekes"),
+                new Song("Vlieg Met Me Mee", "Paul de Leeuw"),
+                new Song("Een Beetje Verliefd", "André Hazes"),
+                new Song("Kleine Café Aan De Haven", "Vader Abraham"),
+                new Song("Ik Neem Je Mee", "Gers Pardoel"),
+                new Song("Lekker Likkie", "Gebroeders Ko"),
+                new Song("Dansen Met Janssen", "Kris Kross Amsterdam & Donnie"),
+                new Song("Heb Je Even Voor Mij", "Frans Bauer"),
+                new Song("Per Spoor (Kedeng Kedeng)", "Guus Meeuwis & Vagant"),
+                new Song("Schudden", "Def Rhymz"),
+                new Song("Zij Gelooft In Mij", "André Hazes")
         };
 
         Stream.of(songs).forEach(playlist::addSong);
 
         // act // assert
-        assertThrows(Exception.class, () -> playlist.addSong(new Song("Lekker Likkie", "Gebroeders Ko", "Nederlandstalig"))
+        assertThrows(Exception.class, () -> playlist.addSong(new Song("Lekker Likkie", "Gebroeders Ko"))
         );
 
 
@@ -52,9 +52,9 @@ class PlaylistTest {
         // arrange
         Playlist playlist = new Playlist();
 
-        Song s1 = new Song("Blinding Lights", "The Weeknd", "Pop");
-        Song s2 = new Song("Smells Like Teen Spirit", "Nirvana", "Rock");
-        Song s3 = new Song("Blinding Lights", "The Weeknd", "Pop");
+        Song s1 = new Song("Blinding Lights", "The Weeknd");
+        Song s2 = new Song("Smells Like Teen Spirit", "Nirvana");
+        Song s3 = new Song("Blinding Lights", "The Weeknd");
 
         playlist.addSong(s1);
         playlist.addSong(s2);

@@ -1,38 +1,45 @@
 package nl.hu.s3.party.domain;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.Objects;
 
 public class Song {
 
-    String title;
-    String artist;
-    String genre;
+    private String title;
+    private String artist;
+    private Genre genre;
 
-    List<String> ALLOWED_GENRES = Arrays.asList(
-            "Pop", "Rock", "HipHop", "Jazz", "Classical",
-            "EDM", "Metal", "RnB", "Country", "Reggae", "Nederlandstalig"
-    );
+    public String getTitle() {
+        return title;
+    }
 
-    public Song(String title, String artist, String genre) {
+    public String getArtist() {
+        return artist;
+    }
 
-        if (!isValidGenre(genre)) {
-            throw new IllegalArgumentException("Genre not allowed: " + genre);
-        }
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public Song(String title, String artist) {
+        this.title = title;
+        this.artist = artist;
+    }
+
+    public Song(String title, String artist, Genre genre) {
         this.title = title.trim();
         this.artist = artist.trim();
         this.genre = genre;
     }
 
-    boolean isValidGenre(String genre) {
-        if (genre == null) return false;
-
-        for (String allowed : ALLOWED_GENRES) {
-            if (allowed.equals(genre)) {
-                return true;
-            }
-        }
-        return false;
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Song song = (Song) o;
+        return Objects.equals(title, song.title) && Objects.equals(artist, song.artist);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, artist);
+    }
 }

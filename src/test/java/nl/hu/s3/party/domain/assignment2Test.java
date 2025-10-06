@@ -13,6 +13,6 @@ class assignment2Test {
     void test_enum_introduced() {
         Field[] fields = Song.class.getDeclaredFields();
 
-        assertTrue(Stream.of(fields).anyMatch(Field::isEnumConstant));
+        assertTrue(Stream.of(fields).anyMatch(field -> field.getType().isEnum()));
     }
 }
