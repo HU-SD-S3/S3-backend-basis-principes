@@ -20,7 +20,12 @@ Tip: je IDE kan automatisch getters voor je genereren.
 
 ## 4 - De submission mag niet twee dezelfde Song's bevatten
 - Bekijk de code en beredeneer of we nu voldoen aan deze requirement
-- Draai de test:
+Ga naar `src/test/java/nl/hu/s3/party/domain/PlaylistTest.java` 
+- Draai de test.
 - Fix de code zodat deze test slaagt.
 
-## 5 ()
+## 5 - BONUS 
+We willen een gevarieerde playlist en daarom willen we de regel instellen dat er niet meer dan twee liedjes van hetzelfde genre in de playlist mogen.
+Omdat de maker van foute Nederlandstalige muziek houdt, geldt de beperking niet voor dit genre.
+- implementeer deze feature.
+- Gebruik een unit test om te checken of dit werkt.
